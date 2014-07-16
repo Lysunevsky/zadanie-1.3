@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _1._3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int m, min, jmin;
+            Console.Write("vvedite razmernost massiva: ");
+            m = int.Parse(Console.ReadLine());
+            int [] a = new int[m];
+            Console.WriteLine("vvedite matrizy: ");
+            for (int j = 0; j < m; j++)
+            {
+                Console.Write("element ["+ (j+1) + "]: ");
+                a[j] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("ishodnaya matriza:");
+            for (int j=0; j<m; j++)
+            {
+                Console.Write(a[j] + " ");
+            }
+           
+            min = a[0];
+            jmin = 0;
+            for (int j=0; j<m; j++)
+            {
+                if (a[j]< min)
+                {
+                    min = a[j];
+                    jmin = j;
+                }
+            }
+            Console.WriteLine("znachenie minimalnogo elementa = " + (min) + " indexom [" + (jmin + 1) + "]");
+            Console.ReadKey();
+        }
+
+    }
+}
